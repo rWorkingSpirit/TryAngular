@@ -1,0 +1,22 @@
+<h1>Dit is mijn Motor</h1>
+
+<h2>Hallo vanaf motoren.component.html</h2>
+
+<p>Het merk van mijn motor is: {{Merk}}</p>
+<button (click)="LaatMotorZien('Honda')">Honda</button>
+<button (click)="LaatMotorZien('Ducati')">Ducati</button>
+<button (click)="LaatMotorZien('Yamaha')">Yamaha</button>
+<p style="background-color: {{motor1.kleur}};">Mijn motor heeft {{motor1.motor}}, en heeft {{motor1.km}} km's.</p>
+<p>En het kenteken is {{motor1.kenteken}}</p>
+
+<div *ngIf="motor2">Dit is NG IF {{motor2.kenteken}}</div>
+
+<button (click)="nieuwFunctieRest()">REST</button>
+
+<button (click)="fillBikes()">Fill bikes</button>
+<div *ngIf="motors">
+    <ul>
+    <li *ngFor="let mo of motors">{{ mo.kleur }}</li>
+    </ul>
+</div>
+    
